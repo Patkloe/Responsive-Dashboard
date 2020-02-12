@@ -1,0 +1,209 @@
+.container { /* define grid container*/
+  display: grid;
+  max-width: 900px;   /
+  position: relative;
+  margin: auto;
+  grid-gap: 10px;
+  grid-template: repeat(7, /**1fr**/150px) / repeat(6, /**1fr**/150px);
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones:width less than 768 px, breakpoint  */
+  .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+h1, h2, h3 {
+  font-family: monospace;
+  text-align: center;
+}
+
+header { /* define grid header*/
+    display: flex;
+  background-color: /**dodgerblue beige**/ #000066;
+  grid-area: 1 / 1 / 2 / 7;
+  text-align: center;
+  border-radius: 15px;
+  color: #fff;
+   
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones:  width less than 768 px, breakpoint */
+  header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+nav { /* define grid nav*/
+  background-color: #ccd9ff;
+  grid-area: 2 / 1 / 2 / 7;
+  text-align: center;
+  border-radius: 15px;
+  
+}
+
+.left {/* define grid left*/
+  background-color: #ccd9ff;
+  grid-area: 3 / 1 / 6/ 3;
+  text-align: center;
+  border-radius: 15px;
+  }
+
+.right { /* define grid right*/
+  background-color: #00004d;
+  grid-area: 3 / 3 / 6 / 7;
+  margin-top: 0px;
+  text-align: center;
+  border-radius: 15px;
+  color: #fff;
+  font-family: Arial;
+  font-size: 16px;
+  padding: 5px;
+}
+.pos{ /* define position and text colour*/
+    text-align: center;
+    color: #fff;
+    margin-left: 10%;
+}
+video { /* define video area*/
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.overlap { /* grid define over other grid, but really tiny, we are not gonna use it*/
+  background-color: #000;
+  grid-area: 4 / 4 / 6 / 6;
+  z-index: 5;
+  border-radius: 10px;
+  color: #fff;
+  font-family: Arial;
+  font-size: 14px;
+}
+
+footer { /* define grid footer*/
+  background-color: #ccd9ff;
+  grid-area: 6/ 1 / 7 / 7;
+  /*text-align: center;*/
+  border-radius: 15px;
+  text-decoration: underline;
+  margin-left: 33.5%;
+  height: 113px;
+}
+figure {
+     display: flex;
+}
+.typ{ /*format text different colour and type*/
+     font-family: 'Bad Script', cursive;
+     font-size: 25px;
+     color: #fff;
+     margin-left: 25px;   
+     }
+.typ1{/*format text*/
+     font-family: Arial;
+     font-size: 18px;
+     color: #663300;
+     margin-left: 25px;
+     text-justify: distribute;   
+     }
+.typ2 { /*format text different colour and type*/
+    font-family: 'Bad Script', cursive;
+    font-size: 30px;
+    color: #1a0d00;
+    margin-left: 25px;
+   }
+.typ3{ /*text appearance*/
+     font-family: Arial;
+     font-size: 18px;
+     color: #fff;
+     margin-left: 0px;
+     text-justify: distribute;
+     text-decoration: none;   
+     }
+img{    /* define the border of the image */
+    border-radius: 7px;
+    
+}
+.align{  /* to format text and define position*/
+    text-align: center;
+    margin-left: 75px;
+}
+.align1{ /* to format text and define position*/
+    text-align: center;
+    margin-left: 85%;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: width less than 768 px, breakpoint  */
+  .align1 {
+    margin-left: 54%;
+  }
+}
+
+/* vertical menu css*/
+/* define a fixed width for the entire menu */
+.navigation {
+  width:100%;
+  
+}
+
+/* reset our lists to remove bullet points and padding */
+.mainmenu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+  display: block;
+  background-color: #CCC;
+  text-decoration: none;
+  padding: 10px;
+  color: #000;
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+    background-color: #fff /*#C5C5C5*/;
+}
+
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 280px;
+}
+
+/*
+  we now overwrite the background-color for .submenu links only.
+  CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu a {
+  background-color: #999;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  background-color: #666;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+.select {
+    background-color: #fff;   /* active link */
+}
